@@ -21,11 +21,8 @@ RUN pip install --no-cache-dir --upgrade pip \
 
 RUN uv pip install --system ingestr
 
-COPY ingestion.py .
-
 # Environment variables
 ENV PYTHONUNBUFFERED=1
 ENV PATH="/usr/local/bin:${PATH}"
 
-# Entrypoint
-ENTRYPOINT ["python3","ingestion.py"]
+
